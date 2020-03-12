@@ -8,8 +8,8 @@
 
 # Executar projeto
     Clonar repositorio e acessar pasta do projeto.
-    Rodar `npm install`, para instalar as dependências. Em seguida `ng serve`, o navegador abrirá o endereço `http://localhost:4200/`.
-
+    Rodar `npm install`, para instalar as dependências. 
+    Em seguida `ng serve`, o navegador abrirá o endereço `http://localhost:4200/`.
 
 # Estrutura das pastas
     Pasta do projeto
@@ -19,7 +19,7 @@
         src
             - app
                 - form
-                    - Componete ou página que está o formulário
+                    - Componente ou página que está o formulário
                         - form.component.ts possuí as rotinas e a logica do formulário e
                             utiliza a função do service para realizar o POST.
                 - service
