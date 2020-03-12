@@ -1,6 +1,16 @@
 # Nome
     Mateus Silva Perinazzo
 
+# Desafio
+
+    Utilizei nesse projeto o [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.25.
+    Versão do Nodejs 10.16.3
+
+# Executar projeto
+    Clonar repositorio e acessar pasta do projeto.
+    Rodar `npm install`, para instalar as dependências. Em seguida `ng serve`, o navegador abrirá o endereço `http://localhost:4200/`.
+
+
 # Estrutura das pastas
     Pasta do projeto
         Arquivos de configuração
@@ -21,12 +31,3 @@
             - assets
                 - pasta das mídias.
             - environments
-
-# Desafio
-
-    Utilizei nesse projeto o [Angular CLI](https://github.com/angular/angular-cli) versão 8.3.25.
-    Versão do Nodejs 10.16.3
-
-## Executar projeto
-    Clonar repositorio e acessar pasta do projeto.
-    Rodar `npm install`, para instalar as dependências. Em seguida `ng serve`, o navegador abrirá o endereço `http://localhost:4200/`.
