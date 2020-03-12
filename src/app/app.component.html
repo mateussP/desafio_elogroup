@@ -1,0 +1,15 @@
+<div id="content">
+    <div class="container-fluid px-lg-5"><br>
+        <div class="alert alert-{{getAlert().alert_class}} alert-dismissible
+            fade
+            show" role="alert" *ngIf="getAlert().title != null"
+            (click)="clearAlert()">
+            <strong>{{getAlert().title}}</strong> {{getAlert().message}}
+            <button type="button" class="close" data-dismiss="alert"
+                aria-label="Close" (click)="clearAlert()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>

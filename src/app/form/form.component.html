@@ -1,0 +1,84 @@
+<div class="container-fluid all">
+   <div class="row allLine justify-content-center align-items-center">
+      <div class="col-md-4">
+         <h1 class="text-center">Desafio</h1>
+         <form [formGroup]="challengeForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+               <label for="name">Nome*:</label>
+               <input type="text" id="name" class="form-control"
+                  formControlName="name"
+                  pattern='([a-zA-Z]+\s){1,}([a-zA-Z+\s]+)' placeholder="Nome Sobrenome">
+            </div>
+            <div class="form-group">
+               <label for="lastName">Telefone:</label>
+               <input type="text" id="phone" class="form-control"
+                  formControlName="phone" mask="00 - 00000000" placeholder="xx - xxxxxxxx">
+            </div>
+
+            <div class="form-group">
+               <label for="howKnow">Como nos conheceu?</label>
+               <select class="form-control" formControlName="howKnow"
+                  id="howKnow">
+                  <option>Tv</option>
+                  <option>Internet</option>
+                  <option>Outros</option>
+               </select>
+            </div>
+
+            <div class="form-group">
+               <label>Possuí Rede Social?</label><br>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input position-static" type="radio"
+                     id="yes" value="true" name="socialMedia"
+                     formControlName="socialMedia"
+                     [(ngModel)]="haveSocialMedia">
+                  <label class="form-check-label" for="yes">Sim</label>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input position-static" type="radio"
+                     id="no" value="false" name="socialMedia"
+                     formControlName="socialMedia"
+                     [(ngModel)]="haveSocialMedia">
+                  <label class="form-check-label" for="no">Não</label>
+               </div>
+            </div>
+
+            <div class="form-group" formGroupName="whichSocialMedia"
+               *ngIf="haveSocialMedia == 'true'">
+               <label>Quais?</label><br>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input"
+                     type="checkbox" id="facebook" name="facebook"
+                     value="facebook"
+                     formControlName="facebook">
+                  <label class="form-check-label" for="facebook">Facebook</label>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input"
+                     type="checkbox" id="linkedIn" name="linkedIn"
+                     value="linkedIn"
+                     formControlName="linkedIn">
+                  <label class="form-check-label" for="linkedIn">LinkedIn</label>
+               </div>
+               <div class="form-check form-check-inline">
+                  <input class="form-check-input"
+                     type="checkbox" id="instagram" name="instagram"
+                     value="instagram"
+                     formControlName="instagram">
+                  <label class="form-check-label" for="instagram">Instagram</label>
+               </div>
+            </div>
+
+            <button type="submit" [disabled]="!challengeForm.valid" class="btn
+               btn-success btn-lg">Enviar</button>
+         </form>
+         <br>
+         <div id="spinner" *ngIf="show_spinner">
+            <img src="/assets/spinner.svg">
+         </div>
+
+         <p *ngIf="data != null">{{ data | json }}</p>
+
+      </div>
+   </div>
+</div>
