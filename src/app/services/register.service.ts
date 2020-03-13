@@ -12,7 +12,6 @@ export class RegisterService {
     return new Promise((resolve, reject) => {
       let headers = new HttpHeaders();
       headers.append('Content-Type', 'application/json');
-      data = { product: data };
       this.http.post('http://localhost:8080', data)
         .subscribe(res => {
           resolve(res);
