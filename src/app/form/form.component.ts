@@ -43,11 +43,15 @@ export class FormComponent implements OnInit {
     }
 
     this.registerService.create(this.challengeForm.value).then((result) => {
-
-    }, err => {
       this.data = this.challengeForm.value;
       this.challengeForm.reset();
       this.alertService.setAlert('Alerta', 'Formulário Enviado com Sucesso!', 'success');
+      this.show = true;
+      this.show_spinner = false;
+    }, err => {
+      this.data = this.challengeForm.value;
+      this.challengeForm.reset();
+      this.alertService.setAlert('Alerta', 'http://localhost:8080 não encontrado!', 'danger');
       this.show = true;
       this.show_spinner = false;
     });
