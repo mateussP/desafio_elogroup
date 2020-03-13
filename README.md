@@ -7,7 +7,7 @@
     Versão do Nodejs 10.16.3
 
 # Executar projeto
-    Clonar repositorio e acessar pasta do projeto.
+    Clonar repositório e acessar pasta do projeto.
     Rodar `npm install`, para instalar as dependências. 
     Em seguida `ng serve`, o navegador abrirá o endereço `http://localhost:4200/`.
 
@@ -15,19 +15,19 @@
     Pasta do projeto
         Arquivos de configuração
         node_modules
-            - Todas as dependencias do projeto.
+            - Todas as dependências do projeto.
         src
             - app
                 - form
-                    - Componente ou página que está o formulário
-                        - form.component.ts possuí as rotinas e a logica do formulário e
-                            utiliza a função do service para realizar o POST.
+                    - Componente ou página onde está o formulário
+                        - form.component.ts possuí as rotinas, a lógica do formulário e
+                            a função do service para realizar o POST.
                 - service
                     - alert
-                        - service que possuí os codigos que geram o alerta de sucesso.
+                        - service que possuí os códigos que geram o alerta de sucesso.
                     - register.service.ts
                         - Tem a função que realiza o POST.
-                - componente e modulos gerais do projeto
+                - componente e módulos gerais do projeto
             - assets
                 - pasta das mídias.
             - environments
